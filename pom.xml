@@ -1,0 +1,105 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com</groupId>
+	<artifactId>springtest</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<!-- 
+	<packaging>jar</packaging>
+ -->
+	<packaging>war</packaging>
+	<name>springtest</name>
+	<url>http://maven.apache.org</url>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.4.RELEASE</version>
+		<relativePath />
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <pebble.version>3.1.2</pebble.version>
+        <start-class>com.springtest.App2</start-class>
+	</properties>
+
+	<dependencies>
+		<!--springboot web模块支持，自动帮我们引入了web模块开发需要的相关jar包 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+	<!-- 开发者工具,资源修改时自动触发加载 服务器重启 -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-devtools</artifactId>
+</dependency>
+
+
+		<!-- JDBC驱动 -->
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+		</dependency>
+		<!-- 集成Pebble View -->
+		<dependency>
+			<groupId>io.pebbletemplates</groupId>
+			<artifactId>pebble-spring-boot-starter</artifactId>
+			<version>${pebble.version}</version>
+		</dependency>
+ 
+	</dependencies>
+	
+	<!-- 
+		<build>
+		<finalName>${project.name}</finalName>
+		<outputDirectory>${project.basedir}\target\${project.name}\WEB-INF\classes</outputDirectory>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<skip>true</skip> 
+					<encoding>UTF-8</encoding>
+					<compilerArguments>
+						<extdirs>${project.basedir}\src\main\webapp\WEB-INF\lib</extdirs>
+					</compilerArguments>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+ -->
+
+</project>
